@@ -1,0 +1,3 @@
+Eclipse for nRF51 SDK 			->	https://devzone.nordicsemi.com/tutorials/7/
+nRFgo Studio            		->  	https://www.nordicsemi.com/eng/Products/2.4GHz-RF/nRFgo-Studio/(language)/eng-GB
+nRF5x-Command-Line-Tools-Win32		->	https://www.nordicsemi.com/eng/nordic/Products/nRF51822/nRF5x-Command-Line-Tools-Win32/33444

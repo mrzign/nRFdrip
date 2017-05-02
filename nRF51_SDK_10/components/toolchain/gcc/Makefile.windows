@@ -1,0 +1,4 @@
+GNU_INSTALL_ROOT := D:/nRF51822/gcc-arm
+GNU_VERSION := 5.4.1
+GNU_PREFIX := arm-none-eabi
+

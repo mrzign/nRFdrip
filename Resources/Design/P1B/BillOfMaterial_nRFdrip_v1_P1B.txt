@@ -1,0 +1,39 @@
+Designator	Manufacturer			Part Name				Package		Value
+------------------------------------------------------------------------------
+U1			Nordic Semiconductor	NRF51822-CFAC-R			BGA-62		
+U2			Anaren					A2500R24A00GM			
+U3			ST						BAL-NRF02D3				UFBGA-5pin		
+U4			Microchip				MCP73831T-2ATI/OT		SOT23-5		
+U5			TI						TPS78228DDC				TSOT-23-5		
+Y1			Abracon					ABS07AIG-32.768KHZ-9-T	3215		
+Y2			AVX						CX2520DB16000D0GEJCC	2520
+Q1,Q3		Diodes					DMG1012T				SOT-523
+Q2			Diodes					DMG1013T				SOT-523		
+J1			Molex					47346-0001			
+J4			Harwin					M20-7810245			
+SW1			E-Switch				EG1247			
+LED1_R		SunLED					XZM2ACR53W-1			LED_0603		
+LED2_G		SunLED					XZM2DG53W-1				LED_0603		
+LED3_B		SunLED					XZFBB53W-1				LED_0603		
+C1,C2,C3,C4													CAP_0402	12p	
+C5,C6,C13													CAP_0402	100n	
+C7															CAP_0402	1n	
+C10															CAP_0402	47n	
+C11															CAP_0402	2n2	
+C12															CAP_0402	1u	
+C14,C15														CAP_0603	4u7	
+C16,C17,C18													CAP_0603	1u	
+L1															IND_0402	0R	
+R1															RES_0402	4k7	
+R2															RES_0402	1k8	
+R3,R13														RES_0402	100k	
+R4															RES_0402	15k	
+R5,R7														RES_0402	22k	
+R6,R11														RES_0402	1k	
+R8															RES_0402	270	
+R9															RES_0402	150	
+R10															RES_0402	15	
+R12															RES_0402	10k	
+					
+Box	Takashi	PS-65W			
+Battery	Li-Ion	SD 301423 (3.0x14x23 mm 110mAh)			
