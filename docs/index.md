@@ -1,41 +1,15 @@
-## nRFdrip - The true pocket sized xBridge
-
 ### What is this?
-The nRFdrip is very much similar to the commonly known xDrip and acts as a bridge between a Dexcom G4 CGM sensor and your Android phone. 
-It shares the similar functionality as the xDrip/xBridge, but the nRFdrip is a project based on different hardware.
+The nRFdrip acts as a bridge between a Dexcom G4 CGM sensor and your Android phone. It shares the similar functionality as the classic [xDrip], but the nRFdrip is a bridge based on different hardware.
+The main focus and target when developing nRFdrip was to make a bridge that could fit your pocket, be reliable and run for many days without the need of charging. 
 
-### Why?
-The hardware consists of two parts, a small, but powerful, 32-bit ARM M0 CPU with integrated Bluetooth 4.0 support (nRF51822) and a proprietary RF module (CC2500) that is used to receive the Dexcom G4 sensor data.
+![alt text](images/nRFdrip_1.png "nRFdrip")
 
-The benefits of using nRF51822 are many. It is not just very small and powerful, it gives you the freedom to control the Bluetooth protocol implementation and it is know for its extreme low power modes.
-The CC2500 is a simple RF receiver also know for extreme low power modes. These two combined gives you a hardware platform which is easy adaptable, low power consuming and pocket sized.
+- [Inside nRFdrip](pages/overview.html)
+- [Source code](https://github.com/mrzign/nRFdrip)
+- [](pages/user_site.html)
+- [](pages/project_site.html)
+- [](pages/nojekyll.html)
+- [](pages/local_test.html)
+- [](pages/resources.html)
 
-### Status
-The nRFdrip hardware is supported in the latest xDrip-plus nightly builds and is to be configured as a regular xBridgeWixel HW.
-
-I'm trying to get the site up and mean while doing some live testing. The 110mAh lasted 8 days after it had been fully charged.
-
-More to come...
-
-
-
-
-
-- [Overview](pages/overview.html)
-- [Making an independent website](pages/independent_site.html)
-- [Making a personal site](pages/user_site.html)
-- [Making a site for a project](pages/project_site.html)
-- [Making a jekyll-free site](pages/nojekyll.html)
-- [Testing your site locally](pages/local_test.html)
-- [Resources](pages/resources.html)
-
-
-
----
-
-[git/github](http://kbroman.org/github_tutorial),
-[GNU make](http://kbroman.org/minimal_make),
-[knitr](http://kbroman.org/knitr_knutshell),
-[R packages](http://kbroman.org/pkg_primer),
-[data organization](http://kbroman.org/dataorg),
-and [reproducible research](http://kbroman.org/steps2rr).
+[xDrip]: http://stephenblackwasalreadytaken.github.io/xDrip/
