@@ -16,3 +16,6 @@ The nRFdrip hardware is supported in the latest xDrip-plus nightly builds and is
 I'm trying to get the site up and mean while doing some live testing. The 110mAh lasted 8 days after it had been fully charged.
 
 More to come...
+
+
+
