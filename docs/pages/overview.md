@@ -1,6 +1,6 @@
 ### Overview
 
-![alt text](images/nRFdrip_2.png "nRFdrip")
+![alt text](../images/nRFdrip_2.png "nRFdrip")
 
 The hardware inside nRFdrip consists of two parts
 * A small, but powerful, 32-bit ARM M0 CPU with integrated Bluetooth 4.0 support (nRF51822)
