@@ -4,12 +4,8 @@ The main focus and target when developing nRFdrip was to make a bridge that coul
 
 ![alt text](images/nRFdrip_1.png "nRFdrip")
 
-- [Inside nRFdrip](pages/overview.html)
+- [Inside nRFdrip](pages/inside.html)
 - [Source code](https://github.com/mrzign/nRFdrip)
-- [](pages/user_site.html)
-- [](pages/project_site.html)
-- [](pages/nojekyll.html)
-- [](pages/local_test.html)
-- [](pages/resources.html)
+- [Instructions on Getting Started](https://github.com/mrzign/nRFdrip/wiki)
 
 [xDrip]: http://stephenblackwasalreadytaken.github.io/xDrip/
