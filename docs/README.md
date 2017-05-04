@@ -4,5 +4,7 @@ The nRFdrip is project very much similar to the commonly known xDrip and it acts
 
 ![alt text](https://github.com/mrzign/nRFdrip/blob/master/docs/images/nRFdrip_1.png "nRFdrip overview")
 
+[Test](https://github.com/mrzign/nRFdrip/docs/pages/test.md)
+
 
 
