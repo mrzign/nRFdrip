@@ -1,4 +1,4 @@
-### Overview
+### Inside nRFdrip
 
 ![alt text](../images/nRFdrip_2.png "nRFdrip")
 
