@@ -17,5 +17,14 @@ I'm trying to get the site up and mean while doing some live testing. The 110mAh
 
 More to come...
 
+------
 
+**DISCLAIMER**
+
+All information, thought, and code described here is intended for informational and educational purposes only. Use of code from github.com is without warranty or support of any kind.
+Each element of the system can fail at any time rendering the system unusable.
+
+This is not a project of the Dexcom company. It is purely a DIY project.
+
+**Do not use any of the information or code to make medical decisions.**
 
