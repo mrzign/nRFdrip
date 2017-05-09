@@ -10,12 +10,10 @@ The hardware consists of two parts, a small, but powerful, 32-bit ARM M0 CPU wit
 The benefits of using nRF51822 are many. It is not just very small and powerful, it gives you the freedom to control the Bluetooth protocol implementation and it is know for its extreme low power modes.
 The CC2500 is a simple RF receiver also know for extreme low power modes. These two combined gives you a hardware platform which is easy adaptable, low power consuming and pocket sized.
 
-### Status
-The nRFdrip hardware is supported in the latest xDrip-plus nightly builds and is to be configured as a regular xBridgeWixel HW.
+**The battery typically lasts for more than 8 days on one charging!**
 
-I'm trying to get the site up and mean while doing some live testing. The 110mAh lasted 8 days after it had been fully charged.
-
-More to come...
+### Were to start?
+Please visit the [wiki](https://github.com/mrzign/nRFdrip/wiki) for details of how to get started
 
 ------
 
