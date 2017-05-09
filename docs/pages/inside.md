@@ -15,9 +15,18 @@ There are three LEDs used for status indication (Blue, Green and Red) that are l
 
 The nRFdrip can be flashed and debugged via a standard 4-wire JLINK debugger.
 
-Further hardware design details can be found on [GitHub](https://github.com/mrzign/nRFdrip/tree/master/Resources) 
+Further hardware design details can be found under [resources](https://github.com/mrzign/nRFdrip/tree/master/Resources) 
 
 - [Back To Main Page](../index.html)
-- [Source code](https://github.com/mrzign/nRFdrip)
 - [Instructions on Getting Started](https://github.com/mrzign/nRFdrip/wiki)
 
+------
+
+**DISCLAIMER**
+
+All information, thought, and code described here is intended for informational and educational purposes only. Use of code from github.com is without warranty or support of any kind.
+Each element of the system can fail at any time rendering the system unusable.
+
+This is not a project of the Dexcom company. It is purely a DIY project.
+
+**Do not use any of the information or code to make medical decisions.**
