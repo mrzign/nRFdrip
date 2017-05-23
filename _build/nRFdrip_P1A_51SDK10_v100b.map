@@ -26,6 +26,10 @@ d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.
                               d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzdi2.o) (__clzsi2)
 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
                               _build/pstorage.o (memcpy)
+d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+                              _build/SEGGER_RTT.o (strcpy)
+d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strlen.o)
+                              _build/SEGGER_RTT.o (strlen)
 
 Allocating common symbols
 Common symbol       size              file
@@ -34,6 +38,7 @@ adc_batt_level      0x4               _build/main.o
 dex_tx_id           0x4               _build/main.o
 adc_filtered_batt_level
                     0x4               _build/main.o
+_SEGGER_RTT         0xa8              _build/SEGGER_RTT.o
 
 Discarded input sections
 
@@ -2477,6 +2482,144 @@ Discarded input sections
  .debug_macro   0x00000000       0x34 _build/main.o
  .debug_macro   0x00000000       0x10 _build/main.o
  .debug_macro   0x00000000       0x16 _build/main.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT.o
+ .text          0x00000000        0x0 _build/SEGGER_RTT.o
+ .data          0x00000000        0x0 _build/SEGGER_RTT.o
+ .bss           0x00000000        0x0 _build/SEGGER_RTT.o
+ .data._aTerminalId
+                0x00000000       0x10 _build/SEGGER_RTT.o
+ .bss._acUpBuffer
+                0x00000000      0x400 _build/SEGGER_RTT.o
+ .bss._acDownBuffer
+                0x00000000       0x10 _build/SEGGER_RTT.o
+ .bss._ActiveTerminal
+                0x00000000        0x1 _build/SEGGER_RTT.o
+ .rodata        0x00000000       0x17 _build/SEGGER_RTT.o
+ .text._DoInit  0x00000000       0xa0 _build/SEGGER_RTT.o
+ .text._WriteBlocking
+                0x00000000       0xb4 _build/SEGGER_RTT.o
+ .text._WriteNoCheck
+                0x00000000       0x80 _build/SEGGER_RTT.o
+ .text._PostTerminalSwitch
+                0x00000000       0x40 _build/SEGGER_RTT.o
+ .text._GetAvailWriteSpace
+                0x00000000       0x44 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_ReadNoLock
+                0x00000000      0x104 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_Read
+                0x00000000       0x38 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_WriteWithOverwriteNoLock
+                0x00000000      0x12c _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_WriteSkipNoLock
+                0x00000000      0x13c _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_WriteNoLock
+                0x00000000       0xac _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_Write
+                0x00000000       0x48 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_WriteString
+                0x00000000       0x2c _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_GetKey
+                0x00000000       0x34 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_WaitKey
+                0x00000000       0x20 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_HasKey
+                0x00000000       0x3c _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_HasData
+                0x00000000       0x38 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_AllocDownBuffer
+                0x00000000       0xf4 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_AllocUpBuffer
+                0x00000000       0xf4 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_ConfigUpBuffer
+                0x00000000       0xd0 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_ConfigDownBuffer
+                0x00000000       0xd0 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_SetNameUpBuffer
+                0x00000000       0x60 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_SetNameDownBuffer
+                0x00000000       0x64 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_SetFlagsUpBuffer
+                0x00000000       0x64 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_SetFlagsDownBuffer
+                0x00000000       0x64 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_Init
+                0x00000000       0x10 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_SetTerminal
+                0x00000000       0xc8 _build/SEGGER_RTT.o
+ .text.SEGGER_RTT_TerminalOut
+                0x00000000      0x140 _build/SEGGER_RTT.o
+ .debug_info    0x00000000      0xd37 _build/SEGGER_RTT.o
+ .debug_abbrev  0x00000000      0x1bc _build/SEGGER_RTT.o
+ .debug_aranges
+                0x00000000       0xf0 _build/SEGGER_RTT.o
+ .debug_ranges  0x00000000       0xe0 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x15b _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x83e _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x40 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x11b _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x22 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x4c _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x8d _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x35 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x9c _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x16d _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x4a _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x52 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x1f _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x43 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x20 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x187 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000      0x330 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x10 _build/SEGGER_RTT.o
+ .debug_macro   0x00000000       0x35 _build/SEGGER_RTT.o
+ .debug_line    0x00000000      0x580 _build/SEGGER_RTT.o
+ .debug_str     0x00000000     0x5eb8 _build/SEGGER_RTT.o
+ .comment       0x00000000       0x6f _build/SEGGER_RTT.o
+ .debug_frame   0x00000000      0x36c _build/SEGGER_RTT.o
+ .ARM.attributes
+                0x00000000       0x31 _build/SEGGER_RTT.o
+ COMMON         0x00000000       0xa8 _build/SEGGER_RTT.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT_Syscalls_GCC.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT_Syscalls_GCC.o
+ .group         0x00000000        0x8 _build/SEGGER_RTT_Syscalls_GCC.o
+ .text          0x00000000        0x0 _build/SEGGER_RTT_Syscalls_GCC.o
+ .data          0x00000000        0x0 _build/SEGGER_RTT_Syscalls_GCC.o
+ .bss           0x00000000        0x0 _build/SEGGER_RTT_Syscalls_GCC.o
+ .text._write   0x00000000       0x24 _build/SEGGER_RTT_Syscalls_GCC.o
+ .text._write_r
+                0x00000000       0x24 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_info    0x00000000       0xee _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_abbrev  0x00000000       0x7c _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_aranges
+                0x00000000       0x28 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_ranges  0x00000000       0x18 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_macro   0x00000000       0x29 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_macro   0x00000000      0x83e _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_macro   0x00000000       0x40 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_macro   0x00000000      0x11b _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_line    0x00000000       0x97 _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_str     0x00000000     0x2b20 _build/SEGGER_RTT_Syscalls_GCC.o
+ .comment       0x00000000       0x6f _build/SEGGER_RTT_Syscalls_GCC.o
+ .debug_frame   0x00000000       0x50 _build/SEGGER_RTT_Syscalls_GCC.o
+ .ARM.attributes
+                0x00000000       0x31 _build/SEGGER_RTT_Syscalls_GCC.o
  .data          0x00000000        0x0 _build/gcc_startup_nrf51.o
  .bss           0x00000000        0x0 _build/gcc_startup_nrf51.o
  .ARM.extab     0x00000000        0x0 _build/gcc_startup_nrf51.o
@@ -2502,6 +2645,18 @@ Discarded input sections
  .text          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
  .data          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
  .bss           0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
+ .text          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .data          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .bss           0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .text.strcpy   0x00000000       0x10 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .debug_frame   0x00000000       0x20 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .ARM.attributes
+                0x00000000       0x2c d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strcpy.o)
+ .text          0x00000000        0xe d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strlen.o)
+ .data          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strlen.o)
+ .bss           0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x00000000       0x1c d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-strlen.o)
  .text          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
  .data          0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
  .bss           0x00000000        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtend.o
@@ -2540,6 +2695,8 @@ LOAD _build/ble_advertising.o
 LOAD _build/system_nrf51.o
 LOAD _build/softdevice_handler.o
 LOAD _build/main.o
+LOAD _build/SEGGER_RTT.o
+LOAD _build/SEGGER_RTT_Syscalls_GCC.o
 LOAD _build/gcc_startup_nrf51.o
 START GROUP
 LOAD d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a
@@ -2562,7 +2719,7 @@ END GROUP
  *(fs_data)
                 [!provide]                PROVIDE (__stop_fs_data, .)
 
-.text           0x00018000     0x6578
+.text           0x00018000     0x658c
  *(.Vectors)
  .Vectors       0x00018000       0xc0 _build/gcc_startup_nrf51.o
                 0x00018000                __Vectors
@@ -3030,77 +3187,77 @@ END GROUP
                 0x0001d558       0x50 _build/main.o
                 0x0001d558                adc_config
  .text.sample_battery
-                0x0001d5a8      0x164 _build/main.o
+                0x0001d5a8      0x160 _build/main.o
                 0x0001d5a8                sample_battery
  .text.on_write
-                0x0001d70c       0xbc _build/main.o
+                0x0001d708       0xbc _build/main.o
  .text.on_ble_evt
-                0x0001d7c8       0xfc _build/main.o
+                0x0001d7c4       0xfc _build/main.o
  .text.ble_evt_dispatch
-                0x0001d8c4       0x28 _build/main.o
+                0x0001d8c0       0x28 _build/main.o
  .text.ble_stack_init
-                0x0001d8ec       0xe8 _build/main.o
+                0x0001d8e8       0xe8 _build/main.o
  .text.BLE_sleep
-                0x0001d9d4       0xa4 _build/main.o
-                0x0001d9d4                BLE_sleep
+                0x0001d9d0       0xa4 _build/main.o
+                0x0001d9d0                BLE_sleep
  .text.power_manage
-                0x0001da78      0x194 _build/main.o
- .text.main     0x0001dc0c      0x584 _build/main.o
-                0x0001dc0c                main
- .text          0x0001e190       0x54 _build/gcc_startup_nrf51.o
-                0x0001e190                Reset_Handler
-                0x0001e1d8                NMI_Handler
-                0x0001e1da                HardFault_Handler
-                0x0001e1dc                SVC_Handler
-                0x0001e1de                PendSV_Handler
-                0x0001e1e0                SysTick_Handler
-                0x0001e1e2                GPIOTE_IRQHandler
-                0x0001e1e2                POWER_CLOCK_IRQHandler
-                0x0001e1e2                RTC0_IRQHandler
-                0x0001e1e2                LPCOMP_IRQHandler
-                0x0001e1e2                SWI4_IRQHandler
-                0x0001e1e2                TEMP_IRQHandler
-                0x0001e1e2                QDEC_IRQHandler
-                0x0001e1e2                UART0_IRQHandler
-                0x0001e1e2                SWI5_IRQHandler
-                0x0001e1e2                TIMER0_IRQHandler
-                0x0001e1e2                RADIO_IRQHandler
-                0x0001e1e2                TIMER1_IRQHandler
-                0x0001e1e2                ECB_IRQHandler
-                0x0001e1e2                Default_Handler
-                0x0001e1e2                SWI3_IRQHandler
-                0x0001e1e2                CCM_AAR_IRQHandler
-                0x0001e1e2                WDT_IRQHandler
-                0x0001e1e2                TIMER2_IRQHandler
-                0x0001e1e2                RNG_IRQHandler
-                0x0001e1e2                SPI1_TWI1_IRQHandler
-                0x0001e1e2                SWI1_IRQHandler
- .text          0x0001e1e4      0x114 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
-                0x0001e1e4                __aeabi_uidiv
-                0x0001e1e4                __udivsi3
-                0x0001e2f0                __aeabi_uidivmod
- .text          0x0001e2f8        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
-                0x0001e2f8                __aeabi_idiv0
-                0x0001e2f8                __aeabi_ldiv0
- .text          0x0001e2fc       0x40 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
-                0x0001e2fc                __aeabi_uldivmod
- .text          0x0001e33c      0x180 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivmoddi4.o)
-                0x0001e33c                __udivmoddi4
- .text          0x0001e4bc       0x18 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzdi2.o)
-                0x0001e4bc                __clzdi2
- .text          0x0001e4d4       0x3c d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
-                0x0001e4d4                __clzsi2
- .text.memcpy   0x0001e510       0x12 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
-                0x0001e510                memcpy
+                0x0001da74      0x1ac _build/main.o
+ .text.main     0x0001dc20      0x584 _build/main.o
+                0x0001dc20                main
+ .text          0x0001e1a4       0x54 _build/gcc_startup_nrf51.o
+                0x0001e1a4                Reset_Handler
+                0x0001e1ec                NMI_Handler
+                0x0001e1ee                HardFault_Handler
+                0x0001e1f0                SVC_Handler
+                0x0001e1f2                PendSV_Handler
+                0x0001e1f4                SysTick_Handler
+                0x0001e1f6                GPIOTE_IRQHandler
+                0x0001e1f6                POWER_CLOCK_IRQHandler
+                0x0001e1f6                RTC0_IRQHandler
+                0x0001e1f6                LPCOMP_IRQHandler
+                0x0001e1f6                SWI4_IRQHandler
+                0x0001e1f6                TEMP_IRQHandler
+                0x0001e1f6                QDEC_IRQHandler
+                0x0001e1f6                UART0_IRQHandler
+                0x0001e1f6                SWI5_IRQHandler
+                0x0001e1f6                TIMER0_IRQHandler
+                0x0001e1f6                RADIO_IRQHandler
+                0x0001e1f6                TIMER1_IRQHandler
+                0x0001e1f6                ECB_IRQHandler
+                0x0001e1f6                Default_Handler
+                0x0001e1f6                SWI3_IRQHandler
+                0x0001e1f6                CCM_AAR_IRQHandler
+                0x0001e1f6                WDT_IRQHandler
+                0x0001e1f6                TIMER2_IRQHandler
+                0x0001e1f6                RNG_IRQHandler
+                0x0001e1f6                SPI1_TWI1_IRQHandler
+                0x0001e1f6                SWI1_IRQHandler
+ .text          0x0001e1f8      0x114 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivsi3.o)
+                0x0001e1f8                __aeabi_uidiv
+                0x0001e1f8                __udivsi3
+                0x0001e304                __aeabi_uidivmod
+ .text          0x0001e30c        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_dvmd_tls.o)
+                0x0001e30c                __aeabi_idiv0
+                0x0001e30c                __aeabi_ldiv0
+ .text          0x0001e310       0x40 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_aeabi_uldivmod.o)
+                0x0001e310                __aeabi_uldivmod
+ .text          0x0001e350      0x180 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivmoddi4.o)
+                0x0001e350                __udivmoddi4
+ .text          0x0001e4d0       0x18 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzdi2.o)
+                0x0001e4d0                __clzdi2
+ .text          0x0001e4e8       0x3c d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_clzsi2.o)
+                0x0001e4e8                __clzsi2
+ .text.memcpy   0x0001e524       0x12 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-memcpy-stub.o)
+                0x0001e524                memcpy
  *(.init)
- *fill*         0x0001e522        0x2 
- .init          0x0001e524        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x0001e524                _init
- .init          0x0001e528        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+ *fill*         0x0001e536        0x2 
+ .init          0x0001e538        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x0001e538                _init
+ .init          0x0001e53c        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
  *(.fini)
- .fini          0x0001e530        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
-                0x0001e530                _fini
- .fini          0x0001e534        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
+ .fini          0x0001e544        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crti.o
+                0x0001e544                _fini
+ .fini          0x0001e548        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtn.o
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -3113,62 +3270,62 @@ END GROUP
  *(.dtors)
  *(.rodata*)
  .rodata._global_impure_ptr
-                0x0001e53c        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-impure.o)
-                0x0001e53c                _global_impure_ptr
+                0x0001e550        0x4 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m\libc_nano.a(lib_a-impure.o)
+                0x0001e550                _global_impure_ptr
  .rodata.m_default_config
-                0x0001e540       0x10 _build/nrf_drv_spi.o
+                0x0001e554       0x10 _build/nrf_drv_spi.o
  .rodata.m_conn_params_timer_id
-                0x0001e550        0x4 _build/ble_conn_params.o
+                0x0001e564        0x4 _build/ble_conn_params.o
  .rodata.m_spi_master_0
-                0x0001e554        0x8 _build/main.o
+                0x0001e568        0x8 _build/main.o
  .rodata.m_ble_led_timer_id
-                0x0001e55c        0x4 _build/main.o
+                0x0001e570        0x4 _build/main.o
  .rodata.m_sleep_timer_id
-                0x0001e560        0x4 _build/main.o
+                0x0001e574        0x4 _build/main.o
  .rodata.m_timeout_timer_id
-                0x0001e564        0x4 _build/main.o
+                0x0001e578        0x4 _build/main.o
  .rodata.m_timestamp_timer_id
-                0x0001e568        0x4 _build/main.o
- .rodata        0x0001e56c        0xc _build/main.o
+                0x0001e57c        0x4 _build/main.o
+ .rodata        0x0001e580        0xc _build/main.o
  *(.eh_frame*)
- .eh_frame      0x0001e578        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
-                0x0001e578                . = ALIGN (0x4)
+ .eh_frame      0x0001e58c        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+                0x0001e58c                . = ALIGN (0x4)
 
-.glue_7         0x0001e578        0x0
- .glue_7        0x0001e578        0x0 linker stubs
+.glue_7         0x0001e58c        0x0
+ .glue_7        0x0001e58c        0x0 linker stubs
 
-.glue_7t        0x0001e578        0x0
- .glue_7t       0x0001e578        0x0 linker stubs
+.glue_7t        0x0001e58c        0x0
+ .glue_7t       0x0001e58c        0x0 linker stubs
 
-.vfp11_veneer   0x0001e578        0x0
- .vfp11_veneer  0x0001e578        0x0 linker stubs
+.vfp11_veneer   0x0001e58c        0x0
+ .vfp11_veneer  0x0001e58c        0x0 linker stubs
 
-.v4_bx          0x0001e578        0x0
- .v4_bx         0x0001e578        0x0 linker stubs
+.v4_bx          0x0001e58c        0x0
+ .v4_bx         0x0001e58c        0x0 linker stubs
 
-.iplt           0x0001e578        0x0
- .iplt          0x0001e578        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.iplt           0x0001e58c        0x0
+ .iplt          0x0001e58c        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
-.ARM.extab      0x0001e578        0x0
+.ARM.extab      0x0001e58c        0x0
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0001e578                . = ALIGN (0x4)
-                0x0001e578                __exidx_start = .
+                0x0001e58c                . = ALIGN (0x4)
+                0x0001e58c                __exidx_start = .
 
-.ARM.exidx      0x0001e578        0x8
+.ARM.exidx      0x0001e58c        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x0001e578        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
- .ARM.exidx     0x0001e580        0x0 _build/gcc_startup_nrf51.o
+ .ARM.exidx     0x0001e58c        0x8 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/../../../../arm-none-eabi/lib/armv6-m/crt0.o
+ .ARM.exidx     0x0001e594        0x0 _build/gcc_startup_nrf51.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x0001e580        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivmoddi4.o)
+ .ARM.exidx     0x0001e594        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m\libgcc.a(_udivmoddi4.o)
                                   0x8 (size before relaxing)
-                0x0001e580                . = ALIGN (0x4)
-                0x0001e580                __exidx_end = .
-                0x0001e580                __etext = .
+                0x0001e594                . = ALIGN (0x4)
+                0x0001e594                __exidx_end = .
+                0x0001e594                __etext = .
 
-.rel.dyn        0x0001e580        0x0
- .rel.iplt      0x0001e580        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
+.rel.dyn        0x0001e594        0x0
+ .rel.iplt      0x0001e594        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
-.data           0x20002000       0xb4 load address 0x0001e580
+.data           0x20002000       0xb4 load address 0x0001e594
                 0x20002000                __data_start__ = .
  *(vtable)
  *(.data*)
@@ -3221,10 +3378,10 @@ END GROUP
                 0x200020b4                . = ALIGN (0x4)
                 0x200020b4                __data_end__ = .
 
-.igot.plt       0x200020b4        0x0 load address 0x0001e634
+.igot.plt       0x200020b4        0x0 load address 0x0001e648
  .igot.plt      0x200020b4        0x0 d:/nrf51822/gcc-arm/bin/../lib/gcc/arm-none-eabi/5.4.1/armv6-m/crtbegin.o
 
-.bss            0x200020b4      0x5fc load address 0x0001e634
+.bss            0x200020b4      0x5fc load address 0x0001e648
                 0x200020b4                . = ALIGN (0x4)
                 0x200020b4                __bss_start__ = .
  *(.bss*)
@@ -3418,7 +3575,7 @@ END GROUP
                 0x20007800                __StackLimit = (__StackTop - SIZEOF (.stack_dummy))
                 0x20008000                PROVIDE (__stack, __StackTop)
                 0x00000001                ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed with stack)
-OUTPUT(_build/nRFdrip_P1A_51SDK10_v100a.out elf32-littlearm)
+OUTPUT(_build/nRFdrip_P1A_51SDK10_v100b.out elf32-littlearm)
 
 .ARM.attributes
                 0x00000000       0x28
@@ -3594,7 +3751,7 @@ OUTPUT(_build/nRFdrip_P1A_51SDK10_v100a.out elf32-littlearm)
  .debug_ranges  0x00001408      0x400 _build/softdevice_handler.o
  .debug_ranges  0x00001808      0x5c0 _build/main.o
 
-.debug_macro    0x00000000     0xda88
+.debug_macro    0x00000000     0xda7c
  .debug_macro   0x00000000      0x307 _build/app_timer.o
  .debug_macro   0x00000307      0x83e _build/app_timer.o
  .debug_macro   0x00000b45       0x22 _build/app_timer.o
@@ -3701,14 +3858,14 @@ OUTPUT(_build/nRFdrip_P1A_51SDK10_v100a.out elf32-littlearm)
  .debug_macro   0x0000d0bb       0x10 _build/softdevice_handler.o
  .debug_macro   0x0000d0cb       0x16 _build/softdevice_handler.o
  .debug_macro   0x0000d0e1       0x10 _build/softdevice_handler.o
- .debug_macro   0x0000d0f1      0x527 _build/main.o
- .debug_macro   0x0000d618       0x76 _build/main.o
- .debug_macro   0x0000d68e      0x1ea _build/main.o
- .debug_macro   0x0000d878      0x1ea _build/main.o
- .debug_macro   0x0000da62       0x10 _build/main.o
- .debug_macro   0x0000da72       0x16 _build/main.o
+ .debug_macro   0x0000d0f1      0x51b _build/main.o
+ .debug_macro   0x0000d60c       0x76 _build/main.o
+ .debug_macro   0x0000d682      0x1ea _build/main.o
+ .debug_macro   0x0000d86c      0x1ea _build/main.o
+ .debug_macro   0x0000da56       0x10 _build/main.o
+ .debug_macro   0x0000da66       0x16 _build/main.o
 
-.debug_line     0x00000000     0x9198
+.debug_line     0x00000000     0x91a0
  .debug_line    0x00000000      0xdfe _build/app_timer.o
  .debug_line    0x00000dfe      0x367 _build/app_error.o
  .debug_line    0x00001165      0x37e _build/nrf_adc.o
@@ -3721,9 +3878,9 @@ OUTPUT(_build/nRFdrip_P1A_51SDK10_v100a.out elf32-littlearm)
  .debug_line    0x00005293     0x10f4 _build/ble_advertising.o
  .debug_line    0x00006387      0x30b _build/system_nrf51.o
  .debug_line    0x00006692      0xe69 _build/softdevice_handler.o
- .debug_line    0x000074fb     0x1c9d _build/main.o
+ .debug_line    0x000074fb     0x1ca5 _build/main.o
 
-.debug_str      0x00000000    0x4325d
+.debug_str      0x00000000    0x431d2
  .debug_str     0x00000000    0x354fb _build/app_timer.o
                               0x3585a (size before relaxing)
  .debug_str     0x000354fb      0x42e _build/app_error.o
@@ -3748,5 +3905,5 @@ OUTPUT(_build/nRFdrip_P1A_51SDK10_v100a.out elf32-littlearm)
                               0x2ef18 (size before relaxing)
  .debug_str     0x00041321      0x85b _build/softdevice_handler.o
                               0x39a1c (size before relaxing)
- .debug_str     0x00041b7c     0x16e1 _build/main.o
-                              0x409ae (size before relaxing)
+ .debug_str     0x00041b7c     0x1656 _build/main.o
+                              0x40923 (size before relaxing)
