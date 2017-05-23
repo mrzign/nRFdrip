@@ -50,6 +50,8 @@ $(abspath $(SDK_PATH)/components/ble/ble_advertising/ble_advertising.c) \
 $(abspath $(SDK_PATH)/components/toolchain/system_nrf51.c) \
 $(abspath $(SDK_PATH)/components/softdevice/common/softdevice_handler/softdevice_handler.c) \
 $(abspath source/main.c) \
+$(abspath source/SEGGER_RTT.c) \
+$(abspath source/SEGGER_RTT_Syscalls_GCC.c) \
 
 #assembly files common to all targets
 ASM_SOURCE_FILES  = $(abspath $(SDK_PATH)/components/toolchain/gcc/gcc_startup_nrf51.s)
@@ -84,6 +86,7 @@ BUILD_DIRECTORIES := $(sort $(OBJECT_DIRECTORY) $(OUTPUT_BINARY_DIRECTORY) $(LIS
 
 #flags common to all targets
 CFLAGS  = -DBOARD_NRFDRIP_P1A
+#CFLAGS += -DRTT_DEBUG_EN
 CFLAGS += -DSOFTDEVICE_PRESENT
 CFLAGS += -DNRF51
 CFLAGS += -DS110
@@ -142,7 +145,7 @@ vpath %.s $(ASM_PATHS)
 
 OBJECTS = $(C_OBJECTS) $(ASM_OBJECTS)
 
-nrf51422_xxac_s110: OUTPUT_FILENAME := nRFdrip_P1A_51SDK10_v100a
+nrf51422_xxac_s110: OUTPUT_FILENAME := nRFdrip_P1A_51SDK10_v100b
 nrf51422_xxac_s110: LINKER_SCRIPT=nRFdrip_gcc_nrf51.ld
 nrf51422_xxac_s110: $(BUILD_DIRECTORIES) $(OBJECTS)
 	@echo Linking target: $(OUTPUT_FILENAME).out
