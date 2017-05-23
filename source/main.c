@@ -34,9 +34,15 @@
 #include "ble_advertising.h"
 #include "ble_conn_params.h"
 #include "softdevice_handler.h"
-
 #include "nrf_adc.h"
+
+#ifdef RTT_DEBUG_EN
+#include "SEGGER_RTT.h"
+#endif
+
 typedef __uint32_t uint32_t ;
+
+
 
 #define TX_RX_MSG_LENGTH        		24
 
@@ -53,9 +59,6 @@ typedef __uint32_t uint32_t ;
 
 #define BLE_LED_ON_INTERVAL_IN_TKS	  	APP_TIMER_TICKS(200, APP_TIMER_PRESCALER)
 #define BLE_LED_OFF_INTERVAL_IN_TKS   	APP_TIMER_TICKS(1800, APP_TIMER_PRESCALER)
-
-#define DEX_LED_ON_INTERVAL_IN_TKS	  	APP_TIMER_TICKS(50, APP_TIMER_PRESCALER)
-#define DEX_LED_OFF_INTERVAL_IN_TKS   	APP_TIMER_TICKS(2950, APP_TIMER_PRESCALER)
 
 #define MIN_CONN_INTERVAL             	MSEC_TO_UNITS(20, UNIT_1_25_MS)
 #define MAX_CONN_INTERVAL             	MSEC_TO_UNITS(40, UNIT_1_25_MS)
@@ -74,10 +77,10 @@ typedef __uint32_t uint32_t ;
 #define DEAD_BEEF                     	0xDEADBEEF                                  /**< Value used as error code on stack dump, can be used to identify stack location on stack unwind. */
 
 #define ADC_FULLY_CHARGED				950 // >3.8V
-#define ADC_FULLY_DRAINED				750 // <3.2V
+#define ADC_FULLY_DRAINED				760 // <3.2V
 #define ADC_CRITICAL					710 // <3.0V
 
-#define SLEEP_TIME						299950 //~5min in ms (trimmed value)
+#define SLEEP_TIME						299960 //~5min in ms (trimmed value)
 
 
 static ble_gatts_char_handles_t m_char_handles;                                     /**< Handles of local characteristic (as provided by the BLE stack).*/
@@ -93,6 +96,9 @@ volatile bool adc_conv_ongoing = false;
 
 static uint8_t m_tx_data_spi[TX_RX_MSG_LENGTH]; ///< SPI master TX buffer.
 static uint8_t m_rx_data_spi[TX_RX_MSG_LENGTH]; ///< SPI master RX buffer.
+#if (RTT_DEBUG == 1)
+	static char rtt_buf[50];
+#endif
 
 static const nrf_drv_spi_t 		m_spi_master_0 = NRF_DRV_SPI_INSTANCE(0);
 
@@ -485,7 +491,10 @@ uint8_t WaitForPacket(uint32_t milliseconds, dex_pkt* p_pkt, uint8_t channel)
 	timeout = false;
     err_code = app_timer_start(m_timeout_timer_id, APP_TIMER_TICKS(milliseconds, APP_TIMER_PRESCALER), NULL);
 	APP_ERROR_CHECK(err_code);
-
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Listening on channel %d for %lu ms\r\n", (uint8_t)channel, (uint32_t)milliseconds);
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
     while (!timeout && !result)
     {
     	//Do not spam CC2500 with SPI polling.
@@ -520,6 +529,10 @@ uint8_t WaitForPacket(uint32_t milliseconds, dex_pkt* p_pkt, uint8_t channel)
 			}
 			else
 			{
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "CRC error\r\n");
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 				//CRC-error
 				//LEDS_ON(LED_RGB_BLUE_MASK);
 			}
@@ -529,7 +542,10 @@ uint8_t WaitForPacket(uint32_t milliseconds, dex_pkt* p_pkt, uint8_t channel)
 		if(pkt_len > 0 && !result)
 		{
 			pkt_len = 0;
-
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Corrupt data\r\n");
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 			//Flush RX FIFO since it contains corrupt data or a pkg not ment for us
 			do
 			{
@@ -1169,6 +1185,11 @@ void sample_battery(void)
 		batt_critical = true;
 	else if(adc_filtered_batt_level > ADC_FULLY_DRAINED)
 		batt_critical = false;
+
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Sampled battery = %i\r\n", (uint16_t)adc_filtered_batt_level);
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 }
 
 /**@brief Function for evaluating the value written in CCCD
@@ -1369,9 +1390,14 @@ static void power_manage(void)
 		}
 		//Aim at center of first channel
 		sleeptime += 250;
+		//Compensate for softdevice RTC affection
+		sleeptime -= (uint32_t)ROUNDED_DIV(ms_timestamp, 160);
 
 	}
-
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Going to sleep for %lu\r\n", sleeptime);
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 	wake_up_flag = false;
 
 	//Check if reasonable sleep time
@@ -1453,8 +1479,6 @@ int main(void)
 		//Indicate fault condition
 		LEDS_ON(LED_RGB_RED_MASK);
 	}
-
-
 	//Make first measurement
 	sample_battery();
 
@@ -1472,6 +1496,7 @@ int main(void)
 		power_manage();
 	}
 
+
 	//Init BLE
 	ble_stack_init();
     gap_params_init();
@@ -1479,7 +1504,10 @@ int main(void)
     advertising_data_init();
     conn_params_init();
     advertising_start();
-
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Start advertising\r\n");
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
     //Wait for BLE connection and GATT write flag (will not work without it)
     //Leave it on for user to configure xBridgeWixel + Dex Transmitter ID
     while(!m_is_notifying_enabled)
@@ -1488,7 +1516,10 @@ int main(void)
     	if(!is_ble_connected && !is_ble_advertising)
     		advertising_start();
     }
-
+#if(RTT_DEBUG == 1)
+	sprintf(rtt_buf, "Notifying enabled\r\n");
+	SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
     //Ask for dex_tx_id;
     while(!ble_received_tx_id)
     {
@@ -1550,14 +1581,20 @@ int main(void)
 			{
 				//Yeay, we got a packet!
 				LEDS_ON(LED_RGB_GREEN_MASK);
-
+#if(RTT_DEBUG == 1)
+				sprintf(rtt_buf, "Got package! [%d, %lu]\r\n", last_channel, debug_timestamp[0][nbr_received_pkts]);
+				SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 				//Keep track of last 4 pkts (debug)
 				nbr_received_pkts++;
 				if(nbr_received_pkts > 4)
 				{
 					nbr_received_pkts = 0;
 				}
-
+#if(RTT_DEBUG == 1)
+				sprintf(rtt_buf, "Try to send over BLE...");
+				SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 				//Wait for BLE link to establish (max 60s)
 				timeout=false;
 				err_code = app_timer_start(m_timeout_timer_id, APP_TIMER_TICKS(60000, APP_TIMER_PRESCALER), NULL);
@@ -1575,12 +1612,32 @@ int main(void)
 
 				if(!timeout)
 				{
+#if(RTT_DEBUG == 1)
+					sprintf(rtt_buf, "Connected...");
+					SEGGER_RTT_WriteString(0, rtt_buf);
+#endif
 					err_code = app_timer_start(m_timeout_timer_id, APP_TIMER_TICKS(2000, APP_TIMER_PRESCALER), NULL);
 					APP_ERROR_CHECK(err_code);
 					while(!ble_send_dex_pkt(&pkt) && !timeout) {nrf_delay_ms(500);};
 					err_code = app_timer_stop(m_timeout_timer_id);
 					APP_ERROR_CHECK(err_code);
 				}
+#if(RTT_DEBUG == 1)
+				if(timeout)
+				{
+
+					sprintf(rtt_buf, "Failed\r\n");
+					SEGGER_RTT_WriteString(0, rtt_buf);
+
+				}
+				else
+				{
+
+					sprintf(rtt_buf, "Success\r\n");
+					SEGGER_RTT_WriteString(0, rtt_buf);
+
+				}
+#endif
 			}
 
 			if(!needsTimingCalibration)
@@ -1588,7 +1645,7 @@ int main(void)
 				if(timeout || !got_packet)
 				{
 					//Indicate fault conditions
-					//BLUE + RED = BLE error/timeout
+					//BLUE + GREEN + RED = BLE error/timeout
 					//RED = No dex pkt received
 					LEDS_ON(LED_RGB_RED_MASK);
 				}
